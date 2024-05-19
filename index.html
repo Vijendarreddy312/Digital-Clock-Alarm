@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <link rel="icon" href="./images/icon.svg">
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./javascript/index.js" defer></script>
+</head>
+<body onload="bgImage()">
+    <div id="toggle">
+        <input type="button" id="btn" onclick="togglebtn()">
+    </div>
+   <div id="containerClock">
+        <div id="hrContainer">
+            <h1 id="hr12"></h1>
+            <h1 id="hr24" ></h1>
+        </div>
+        <h1 id="date"></h1>
+        <h1 id="day"></h1>
+   </div>
+   <h1 id="sec"></h1>
+   <div id="containerAlarm">
+        <span onclick="closeBtn()">+</span>
+        <input id="alarmDate" onchange="alarmTimeDate()" class="inp" type="date">
+        <input id="alarmTime" onchange="alarmTimeDate()" class="inp" type="time">
+   </div>
+   <button id="alarmBtn" onclick="alarmBtn()">Set Alarm</button>
+</body>
+</html> 
+

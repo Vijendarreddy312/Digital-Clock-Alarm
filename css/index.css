@@ -1,0 +1,205 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100vh;
+    overflow: hidden;
+    cursor: context-menu;
+    position: relative;
+}
+#containerClock{
+    width: 30vw;
+    height: 16vw;
+    background-color: rgba(250, 235, 215, 0.4);
+    box-shadow: 2px 2px 5px black ;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    position: relative;
+}
+#containerClock #hrContainer{
+    width: 100%;
+    height: 6vw; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+#hrContainer #hr12{
+    width: 100%;
+    text-align: center;
+    font-size: 3vw;
+    position: absolute;
+}
+#hrContainer #hr24{
+    width: 80%;
+    text-align: center;
+    font-size: 3vw;
+    position: absolute;
+    display: none;
+}
+#containerClock #date{
+    font-size: 3vw;
+    color: aqua;
+}
+h1{
+    text-shadow: 2px 2px 2px black,-2px -2px 2px black;
+}
+#containerClock #day{
+    color: tomato;
+    font-size: 3vw;
+}
+#sec{
+    color: rgba(245, 24, 245, 0.6);
+    font-size: 40vw;
+    position: absolute;
+    z-index: -1;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: none;
+}
+#toggle{
+    width: 60px;
+    height: 30px;
+    background: black;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: fixed;
+    top: 2vw;
+    left: 3vw;
+    border-radius: 20px;
+    transition: all 1s;
+
+}
+#toggle #btn{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    border-radius: 100%;
+    background-color: white;
+}
+#containerAlarm{
+    width: 30vw;
+    height: 15vw;
+    background: rgba(0, 255, 0, 0.602);
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+#containerAlarm span{
+    position: absolute;
+    top: 0;
+    right: 1vw;
+    font-size: 3vw;
+    rotate: 45deg;
+    font-weight: 800;
+}
+.inp{
+    width: 40%;
+    height: 2vw;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 24px;
+    color: blue;
+    text-align: center;
+    background: transparent;
+    border-bottom: 5px solid indigo;
+    font-style: italic;
+}
+#alarmBtn{
+    width: 3vw;
+    height: 3vw;
+    border-radius: 100%;
+    border: none;
+    box-shadow: 3px 3px 2px black;
+    outline: none;
+    background: lime;
+    font-weight: 700;
+    font-size: 15px;
+    position: absolute;
+    top: 3vw;
+    right: 3vw;
+    animation: alarmBtn .5s infinite alternate;
+}
+@keyframes alarmBtn{
+    100%{
+        transform: translateY(-30px);
+    }
+}
+@media screen and (max-width:768px)  {
+    *{
+        font-size: 20px;
+        text-align: center;
+    }
+    #containerClock{
+        width: 80vw;
+        height: 40vw;
+
+    }
+    #containerClock #hrContainer{
+        width: 100%;
+        height: 6vw;  
+    }
+    #hrContainer #hr12{
+        width: 100%;
+        text-align: center;
+        font-size: 8vw;
+    }
+    #hrContainer #hr24{
+        width: 100%;
+        text-align: center;
+        font-size: 8vw;
+    }
+    #containerClock #date{
+        font-size: 6vw;
+        color: aqua;
+        margin-top: 20px;
+    }
+    h1{
+        text-shadow: 2px 2px 2px black,-2px -2px 2px black;
+    }
+    #containerClock #day{
+        color: tomato;
+        font-size: 3vw;
+        margin: 10px;
+    }
+    #containerClock #day{
+        color: tomato;
+        font-size: 5vw;
+    }
+    #sec{
+        font-size: 75vw;
+    }
+    #containerAlarm{
+        width: 80vw;
+        height: 40vw;
+    }
+    #containerAlarm span{
+        font-size: 10vw;
+    }
+    .inp{
+        font-size: 18px;
+    }
+   #alarmBtn{
+        width: 7vw;
+        height: 7vw;
+   }
+ 
+    
+}
+
