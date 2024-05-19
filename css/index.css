@@ -8,8 +8,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-repeat: no-repeat;
-    background-size: 100% 100vh;
+    backgroung: black; 
     overflow: hidden;
     cursor: context-menu;
     position: relative;
